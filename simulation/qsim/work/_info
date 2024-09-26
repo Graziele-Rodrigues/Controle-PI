@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Disciplina EletronicaEmbarcada\pid\simulation\qsim
+vpid
+Z1 ICQnk@J?i=^Ak;=zbRKHUc0
+Z2 VTdU9jaNRdPIcE=J_ke1zm2
+Z3 dE:\Disciplina EletronicaEmbarcada\pid\simulation\qsim
+Z4 w1727283238
+Z5 8pid.vo
+Z6 Fpid.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 W90SlV6lz2j6`JgPZ6QeN0
+!s85 0
+Z10 !s108 1727283238.817000
+Z11 !s107 pid.vo|
+Z12 !s90 -work|work|pid.vo|
+!s101 -O0
+vpid_vlg_check_tst
+!i10b 1
+!s100 l4;i?7LL_Di8gQz<Pm:Ro2
+IJiJ[fL`:DAjZLNH>Ua<ER1
+VHoF99COaXO8PG5hbcN?K[2
+R3
+Z13 w1727283236
+Z14 8pid.vt
+Z15 Fpid.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1727283241.711000
+Z17 !s107 pid.vt|
+Z18 !s90 -work|work|pid.vt|
+!s101 -O0
+R8
+vpid_vlg_sample_tst
+!i10b 1
+!s100 3DThAeDCVX^KQX2W`i]063
+I1_f;[5HDU1G<Y<[QUG4W=1
+V]?eg1MR[;T`j5Q[;H[1J@2
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vpid_vlg_vec_tst
+!i10b 1
+!s100 NUg?W<ohQEZSgOhaFEFSO2
+I8^`B<j`hLQ;E]iF5a2J3K1
+Vf?SAa0eHnlF5?UIORXeQ@1
+R3
+R13
+R14
+R15
+L0 351
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
