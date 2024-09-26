@@ -1,0 +1,60 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+ 
+ENTITY pid IS
+    PORT (
+        clk: IN  STD_LOGIC;
+        entrada_std : IN STD_LOGIC_VECTOR(11 DOWNTO 0); -- valor de entrada
+        saida  : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)  -- valor de saida
+    );
+END pid;
+ 
+ARCHITECTURE RTL OF pid IS
+ 
+      -- valores constantes kp, ki
+    constant con_kp: integer := 1;   -- Kp = 0.1 multiplicado por 10 para evitar fracoes
+    constant con_kp_denominador: integer := 10;  -- Denominador para Kp
+    constant con_ki: integer := 5;   -- Ki = 0.5 multiplicado por 10
+    constant con_ki_denominador: integer := 10;  -- Denominador para Ki
+    constant tempo_divi: integer := 1;   -- Divisor de tempo (ajuste conforme necessario)
+
+    -- sinais internos
+    signal erro_atual        : integer;
+    signal erro_soma         : integer;
+    signal p, i              : integer;
+    signal realimentacao_reg : integer := 0;
+    signal erro_soma_reg     : integer := 0;
+ 
+    -- entrada / saida convertido para inteiro
+    signal entrada  : integer;
+    signal output_val_int    : integer;
+	 signal output_loaded : integer;
+	 
+begin
+    -- converte entrada / saida
+    entrada <= to_integer(unsigned(entrada_std));
+    saida   <= std_logic_vector(to_unsigned(output_val_int, saida'length));
+ 
+ 
+    -- calcula erros
+    erro_atual       <= entrada - realimentacao_reg;
+    erro_soma        <= erro_atual + erro_soma_reg;
+	 
+    -- calcula p 
+    p <= (con_kp * erro_atual) / con_kp_denominador;
+    -- calcula i, a parte integral, usando metodo Euler
+    i <= erro_soma_reg + (con_ki * erro_atual) / con_ki_denominador * tempo_divi;
+ 
+    -- aplica pi
+    output_loaded <= (p + i);
+ 
+    PROCESS (clk)
+    BEGIN
+        IF clk'event and clk = '1' THEN
+	    realimentacao_reg <= output_loaded;
+            output_val_int    <= output_loaded;
+            erro_soma_reg     <= erro_soma;
+        END IF;
+    END PROCESS;
+END RTL;
