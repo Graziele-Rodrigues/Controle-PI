@@ -11,7 +11,7 @@ Este projeto implementa um controlador Proporcional-Integral (PI) simples em VHD
 
 ## Entradas e Saídas
 
-- **`clk`**: Sinal de clock (20Hz na placa alvo).
+- **`clk`**: Sinal de clock.
 - **`enable`**: Habilita o controlador PID.
 - **`clear`**: Limpa os registradores internos (feedback e soma dos erros).
 - **`entrada_std[7:0]`**: Valor de entrada de 8 bits.
