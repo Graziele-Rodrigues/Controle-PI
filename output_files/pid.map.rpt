@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pid
-Wed Sep 25 15:02:20 2024
+Mon Sep 30 17:17:23 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 25 15:02:19 2024           ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 30 17:17:23 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pid                                             ;
 ; Top-level Entity Name              ; pid                                             ;
@@ -152,7 +152,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -162,18 +162,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; pid.vhd                          ; yes             ; User VHDL File               ; E:/Disciplina EletronicaEmbarcada/pid/pid.vhd                         ;         ;
+; pid.vhd                          ; yes             ; User VHDL File               ; D:/Disciplina EletronicaEmbarcada/pid/pid.vhd                         ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
-; db/lpm_divide_7so.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/lpm_divide_7so.tdf           ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/abs_divider_kbg.tdf          ;         ;
-; db/alt_u_div_t5f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/alt_u_div_t5f.tdf            ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/add_sub_unc.tdf              ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/add_sub_vnc.tdf              ;         ;
-; db/lpm_abs_pt9.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/lpm_abs_pt9.tdf              ;         ;
-; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Disciplina EletronicaEmbarcada/pid/db/lpm_abs_9v9.tdf              ;         ;
+; db/lpm_divide_7so.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/lpm_divide_7so.tdf           ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/abs_divider_kbg.tdf          ;         ;
+; db/alt_u_div_t5f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/alt_u_div_t5f.tdf            ;         ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/add_sub_unc.tdf              ;         ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/add_sub_vnc.tdf              ;         ;
+; db/lpm_abs_pt9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/lpm_abs_pt9.tdf              ;         ;
+; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Disciplina EletronicaEmbarcada/pid/db/lpm_abs_9v9.tdf              ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
@@ -255,15 +255,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LOCATION   ; Pin_B13  ; -    ; entrada_std[2] ;
 ; LOCATION   ; Pin_A13  ; -    ; entrada_std[1] ;
 ; LOCATION   ; Pin_N1   ; -    ; entrada_std[0] ;
-; LOCATION   ; Pin_AE23 ; -    ; saida[7]       ;
-; LOCATION   ; Pin_AF23 ; -    ; saida[6]       ;
-; LOCATION   ; Pin_AB21 ; -    ; saida[5]       ;
-; LOCATION   ; Pin_AC22 ; -    ; saida[4]       ;
-; LOCATION   ; Pin_AD22 ; -    ; saida[3]       ;
-; LOCATION   ; Pin_AD23 ; -    ; saida[2]       ;
-; LOCATION   ; Pin_AD21 ; -    ; saida[1]       ;
-; LOCATION   ; Pin_AC21 ; -    ; saida[0]       ;
-; LOCATION   ; Pin_P1   ; -    ; clk            ;
+; LOCATION   ; Pin_AB21 ; -    ; saida[7]       ;
+; LOCATION   ; Pin_AC22 ; -    ; saida[6]       ;
+; LOCATION   ; Pin_AD22 ; -    ; saida[5]       ;
+; LOCATION   ; Pin_AD23 ; -    ; saida[4]       ;
+; LOCATION   ; Pin_AD21 ; -    ; saida[3]       ;
+; LOCATION   ; Pin_AC21 ; -    ; saida[2]       ;
+; LOCATION   ; Pin_AA14 ; -    ; saida[1]       ;
+; LOCATION   ; Pin_Y13  ; -    ; saida[0]       ;
+; LOCATION   ; Pin_N2   ; -    ; clk            ;
 ; LOCATION   ; Pin_N26  ; -    ; enable         ;
 ; LOCATION   ; Pin_N25  ; -    ; clear          ;
 +------------+----------+------+----------------+
@@ -330,15 +330,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 25 15:02:16 2024
+    Info: Processing started: Mon Sep 30 17:17:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pid -c pid
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file pid.vhd
     Info (12022): Found design unit 1: pid-RTL
     Info (12023): Found entity 1: pid
 Info (12127): Elaborating entity "pid" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at pid.vhd(67): signal "clear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pid.vhd(72): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pid.vhd(68): signal "clear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pid.vhd(73): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
@@ -376,9 +376,9 @@ Info (21057): Implemented 1288 device resources after synthesis - the final reso
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 1269 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4671 megabytes
-    Info: Processing ended: Wed Sep 25 15:02:20 2024
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Mon Sep 30 17:17:23 2024
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

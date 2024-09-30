@@ -1,21 +1,22 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
+USE ieee.std_logic_unsigned.all;
  
 ENTITY pid IS
     PORT (
-        clk: IN  STD_LOGIC; -- na placa usar 20Hz
+        clk: IN  STD_LOGIC; -- na placa usar 50MHz
 		  enable: IN  STD_LOGIC;
 		  clear: IN  STD_LOGIC;
         entrada_std : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- valor de entrada
         saida: OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  -- valor de saida
     );
 	 attribute chip_pin: string;
-	 attribute chip_pin of clk: signal is "P1";
+	 attribute chip_pin of clk: signal is "N2";
 	 attribute chip_pin of clear: signal is "N25";
 	 attribute chip_pin of enable: signal is "N26";
 	 attribute chip_pin of entrada_std: signal is "P25, AE14, AF14, AD13, AC13, B13, A13, N1";
-	 attribute chip_pin of saida: signal is "AE23, AF23, AB21, AC22, AD22, AD23, AD21, AC21";
+	 attribute chip_pin of saida: signal is "AB21, AC22, AD22, AD23, AD21, AC21, AA14, Y13";
 END pid;
  
 ARCHITECTURE RTL OF pid IS
@@ -43,11 +44,10 @@ ARCHITECTURE RTL OF pid IS
     signal output_val_int : integer;
 	 signal output_loaded : integer;
 	 
-begin
+BEGIN
     -- converte entrada / saida
     entrada <= to_integer(unsigned(entrada_std));
     saida   <= std_logic_vector(to_unsigned(output_val_int, saida'length));
- 
  
     -- calcula erros
     erro_atual       <= entrada - realimentacao_reg;
@@ -61,7 +61,8 @@ begin
  
     -- aplica pi
     output_loaded <= (p + i);
- 
+	
+	
     PROCESS (clk)
     BEGIN
 		  IF clear = '1'  THEN
